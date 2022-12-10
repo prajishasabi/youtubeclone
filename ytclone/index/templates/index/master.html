@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+             <img src="{% static 'images/ytlogo.png' %}">
+        </div>
+        <div class="header_search">
+        
+            <input type="text" class="ytsearch" placeholder="Search">
+            <button class="search-btn" height="20px"><img src="{% static 'images/search.jpg' %}" width="20px"></button>
+        </div>
+        <div class="header-right">
+            <img  class="imag" src="{% static 'images/video.png' %}">
+            <img class="imag" src="{% static 'images/bell.jpg' %}">
+            <img  class="imag" src="{% static 'images/account.png' %}">
+        </div>
+    </div> 
+    <div class="content">
+        <div class="sidebar">
+            <div class="sidebarfield1">
+                <a href="{% url 'index:index_home' %}"><img  class="imag2" src="{% static 'images/home.png' %}"></a>             <h4>Home</h4>
+             
+            </div>
+             <div class="sidebarfield">
+            <a href="{% url 'index:trending' %}"><img  class="imag2" src="{% static 'images/trending.png' %}"></a>
+                <h4>Trending</h4>
+        
+             </div>
+             <div class="sidebarfield">
+            <a href="{% url 'index:subscription' %}"><img  class="imag2" src="{% static 'images/subscription.png' %}"></a>        
+             <h4>Subscription</h4></div>
+             <div class="sidebarfield">
+                <hr >
+             </div>
+            <div class="sidebarfield">
+                <a href=""><img  class="imag2" src="{% static 'images/library.png' %}"></a>
+                <h4>Library</h4>
+            </div>
+            <div class="sidebarfield">
+               <a href=""><img  class="imag2" src="{% static 'images/history.png' %}"></a>
+                <h4>History</h4>
+            </div>
+            <div class="sidebarfield">
+                    <a href=""><img  class="imag2" src="{% static 'images/videos.jpg' %}"></a>
+                    <h4>Your videos</h4>
+            </div>
+            <div class="sidebarfield">
+            <a href=""><img  class="imag2" src="{% static 'images/watch.png' %}"></a>                        
+            <h4>Watch it later</h4>
+            </div>
+            <div class="sidebarfield">
+                <a href=""><img  class="imag2" src="{% static 'images/like.png' %}"></a>                        
+                <h4>Liked Videos</h4>
+                </div>
+        
+
+        </div>
+    </div>
+    <!-- <div class ="buttonbar">
+    <div class="button">
+        <button value="All"></button>
+        <button value="All"></button>
+        <button value="All"></button>
+        <button value="All"></button>
+    </div> -->
+ -->
+        {% block content %}{% endblock %}
+</div>
+        
+
+    
+</body>
+</html>
