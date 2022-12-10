@@ -14,5 +14,7 @@ def index_sub(request):
 def index_history(request):
     return render(request,'index/history.html')
 
+def index_library(request):
+    return render(request,'index/library.html')
 
 

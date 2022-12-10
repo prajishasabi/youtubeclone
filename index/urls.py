@@ -5,6 +5,9 @@ urlpatterns=[
     path('',views.index_home,name='index_home'),
     path('trending',views.index_trend,name='trending'),
     path('subscription',views.index_sub,name='subscription'),
-    path('history',views.index_history,name='history')
+    path('library',views.index_library,name='library'),
+    path('history',views.index_history,name='history'),
+    
+
 
 ]
