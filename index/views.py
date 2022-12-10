@@ -10,4 +10,9 @@ def index_trend(request):
 
 def index_sub(request):
     return render(request,'index/subscription.html')
+    
+def index_history(request):
+    return render(request,'index/history.html')
+
+
 
